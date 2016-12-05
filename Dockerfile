@@ -54,12 +54,12 @@ RUN apt-get install -y nodejs
 
 
 
-#ADD key ~/.ssh/github_key
+ADD key ~/.ssh/github_key
 
 
 
 
-#RUN chmod 0700 ~/.ssh/github_key && eval $(ssh-agent -s) && ssh-add ~/.ssh/github_key
+RUN chmod 0700 ~/.ssh/github_key && eval $(ssh-agent -s) && ssh-add ~/.ssh/github_key
 
 
 
@@ -70,13 +70,13 @@ RUN apt-get install -y nodejs
 
 
 # add github certificates
-#RUN cp /.ssh/github_key.pub ~/.ssh/github_key.pub && cp /.ssh/github_key ~/.ssh/github_key
+RUN cp /.ssh/github_key.pub ~/.ssh/github_key.pub && cp /.ssh/github_key ~/.ssh/github_key
 
 
 
 
 # add the bitsoko library
-#RUN cd ~ && rm -rf ~/dev && git clone https://github.com/wyklif/basic.git && cd
+RUN cd ~ && rm -rf ~/dev && git clone https://github.com/wyklif/basic.git && cd
 
 
 
