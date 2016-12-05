@@ -54,17 +54,17 @@ RUN cd ~ && npm install blob request mysql compression letsencrypt letsencrypt-c
 
 
 
-#ADD key /root/.ssh/github_key
+#ADD key ~/.ssh/github_key
 
 
 
 
-#RUN chmod 0700 /root/.ssh/github_key && eval $(ssh-agent -s) && ssh-add /root/.ssh/github_key
+#RUN chmod 0700 ~/.ssh/github_key && eval $(ssh-agent -s) && ssh-add ~/.ssh/github_key
 
 
 
 
-#RUN echo "Host github.com\n\tStrictHostKeyChecking no\n" >> /root/.ssh/config && echo " IdentityFile ~/.ssh/github_key" >> /etc/ssh/ssh_config && cd ~ && git clone git@github.com:w/basic.git
+#RUN echo "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config && echo " IdentityFile ~/.ssh/github_key" >> /etc/ssh/ssh_config && cd ~ && git clone git@github.com:w/basic.git
 
 
 
