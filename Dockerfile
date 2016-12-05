@@ -64,7 +64,7 @@ RUN cd ~ && npm install blob request mysql compression letsencrypt letsencrypt-c
 
 
 
-#RUN echo "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config && echo " IdentityFile ~/.ssh/github_key" >> /etc/ssh/ssh_config && cd ~ && git clone git@github.com:w/basic.git
+#RUN echo "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config && echo " IdentityFile ~/.ssh/github_key" >> /etc/ssh/ssh_config && cd ~ && git clone https://github.com/wyklif/basic.git
 
 
 
@@ -76,7 +76,7 @@ RUN cd ~ && npm install blob request mysql compression letsencrypt letsencrypt-c
 
 
 # add the bitsoko library
-#RUN cd ~ && rm -rf ~/dev && git clone git@github.com:USERNAME/REPO.git && cd
+#RUN cd ~ && rm -rf ~/dev && git clone https://github.com/wyklif/basic.git && cd
 
 
 
