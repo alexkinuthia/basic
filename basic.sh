@@ -262,7 +262,7 @@ elif [ $action = start ]
         then starting;
 elif [ $action = install ]
         then installSYS;
-        installSIG;
+        #installSIG;
 
 
 
