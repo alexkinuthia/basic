@@ -59,7 +59,7 @@ RUN cd ~ && npm install blob request mysql compression letsencrypt letsencrypt-c
 
 
 
-#RUN chmod 0700 /root/.ssh/github_key && eval $(ssh-agent -s) && ssh-add /root/.ssh/github_key
+#RUN chmod 0700 /root/.ssh/github_key && eval $(ssh-agent -s) && ssh-add ~/.ssh/github_key
 
 
 
@@ -70,7 +70,7 @@ RUN cd ~ && npm install blob request mysql compression letsencrypt letsencrypt-c
 
 
 # add github certificates
-#RUN cp /.ssh/github_key.pub ~/.ssh/github_key.pub && cp /.ssh/github_key ~/.ssh/github_key
+#RUN cp /root/.ssh/github_key.pub ~/.ssh/github_key.pub && cp /root/.ssh/github_key ~/.ssh/github_key
 
 
 
