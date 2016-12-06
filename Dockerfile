@@ -76,7 +76,7 @@ RUN cp/home/ubuntu/.ssh/github_key.pub /home/ubuntu/.ssh/github_key.pub && cp/ho
 
 
 # add the bitsoko library
-RUN cd ~ && rm -rf ~/dev && git clone https://github.com/wyklif/basic.git && cd
+#RUN cd ~ && rm -rf ~/dev && git clone https://github.com/wyklif/basic.git && cd
 
 
 
