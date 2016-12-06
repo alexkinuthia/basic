@@ -1,4 +1,4 @@
-﻿Def Bash
+
 
 
 #! /bin/sh
