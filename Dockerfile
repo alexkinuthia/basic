@@ -16,7 +16,7 @@ FROM ubuntu:16.04
 
 
 # File Author / Maintainer
-MAINTAINER wycliffe@codeengine.co.ke
+MAINTAINER you@codeengine.co.ke
 
 
 
@@ -49,34 +49,34 @@ RUN apt-get install -y nodejs
 
 
 
-#RUN cd ~ && npm install blob request mysql compression letsencrypt letsencrypt-cli letsencrypt-express letsencrypt@2.x le-store-certbot@2.x le-challenge-fs@2.x le-acme-core@2.x le-sni-auto@2.x http2 cheerio html2jade winston express dateformat socket.io forever jade node-minify geoip-lite node-minify LinusU/node-canvas canvas base64-img twit promised-io web-push moment moment-timezone tz-lookup nodemailer xoauth2 browserify rtc-switchboard eth-lightwallet && cd ~/node_modules/geoip-lite && npm run-script updatedb
+RUN cd ~ && npm install blob request mysql compression letsencrypt letsencrypt-cli letsencrypt-express letsencrypt@2.x le-store-certbot@2.x le-challenge-fs@2.x le-acme-core@2.x le-sni-auto@2.x http2 cheerio html2jade winston express dateformat socket.io forever jade node-minify geoip-lite node-minify LinusU/node-canvas canvas base64-img twit promised-io web-push moment moment-timezone tz-lookup nodemailer xoauth2 browserify rtc-switchboard eth-lightwallet && cd ~/node_modules/geoip-lite && npm run-script updatedb
 
 
 
 
-ADD key /home/ubuntu/.ssh/github_key
+#ADD key /root/.ssh/github_key
 
 
 
 
-RUN chmod 0700 /home/ubuntu/.ssh/github_key && eval $(ssh-agent -s) && ssh-add /home/ubuntu/.ssh/github_key
+#RUN chmod 0700 /root/.ssh/github_key && eval $(ssh-agent -s) && ssh-add /root/.ssh/github_key
 
 
 
 
-RUN echo "Host github.com\n\tStrictHostKeyChecking no\n" >> /home/ubuntu/.ssh/config && echo " IdentityFile /home/ubuntu/.ssh/github_key" >> /etc/ssh/ssh_config && cd ~ && git clone https://github.com/wyklif/basic.git
+#RUN echo "Host github.com\n\tStrictHostKeyChecking no\n" >> /root/.ssh/config && echo " IdentityFile ~/.ssh/github_key" >> /etc/ssh/ssh_config && cd ~ && git clone git@github.com:bitsoko-services/bitsoko.git
 
 
 
 
 # add github certificates
-RUN cp/home/ubuntu/.ssh/github_key.pub /home/ubuntu/.ssh/github_key.pub && cp/home/ubuntu/.ssh/github_key /home/ubuntu/.ssh/github_key
+#RUN cp /.ssh/github_key.pub ~/.ssh/github_key.pub && cp /.ssh/github_key ~/.ssh/github_key
 
 
 
 
 # add the bitsoko library
-#RUN cd ~ && rm -rf ~/dev && git clone https://github.com/wyklif/basic.git && cd
+#RUN cd ~ && rm -rf ~/dev && git clone https://github.com/wyklif/basic.git
 
 
 
@@ -102,4 +102,5 @@ EXPOSE 8080
 
 
 # Set default container command
-ENTRYPOINT eval $(ssh-agent -s) && ssh-add /keys/key && echo "Host github.com\n\tStrictHostKeyChecking no\n" >> /etc/ssh/ssh_config && echo " IdentityFile /keys/key" >> /etc/ssh/ssh_config && cd ~ && rm -rf ~/dev && git clone https://github.com/wyklif/basic.git && cd
+ENTRYPOINT eval $(ssh-agent -s) && ssh-add /keys/key && echo "Host github.com\n\tStrictHostKeyChecking no\n" >> /etc/ssh/ssh_config && echo " IdentityFile /keys/key" >> /etc/ssh/ssh_config && cd ~ && rm -rf ~/dev && git clone https://github.com/wyklif/basic.git
+
