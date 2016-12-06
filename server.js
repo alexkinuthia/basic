@@ -13,7 +13,7 @@ function send404(response) {
 function onRequest(request,response) {
 	if (request.method == 'GET' && request.url == '/') {
 		response.writeHead(200,{"content-type" : "text/html"});
-		fs.createReadStream("~/basic/index.html").pipe(response);
+		fs.createReadStream("./basic/index.html").pipe(response);
 
 
 	}else{
