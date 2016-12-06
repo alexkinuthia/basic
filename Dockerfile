@@ -54,23 +54,23 @@ RUN apt-get install -y nodejs
 
 
 
-ADD key ~/.ssh/github_key
+ADD key /home/ubuntu/.ssh/github_key
 
 
 
 
-RUN chmod 0700 ~/.ssh/github_key && eval $(ssh-agent -s) && ssh-add ~/.ssh/github_key
+RUN chmod 0700 /home/ubuntu/.ssh/github_key && eval $(ssh-agent -s) && ssh-add /home/ubuntu/.ssh/github_key
 
 
 
 
-RUN echo "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config && echo " IdentityFile ~/.ssh/github_key" >> /etc/ssh/ssh_config && cd ~ && git clone https://github.com/wyklif/basic.git
+RUN echo "Host github.com\n\tStrictHostKeyChecking no\n" >> /home/ubuntu/.ssh/config && echo " IdentityFile /home/ubuntu/.ssh/github_key" >> /etc/ssh/ssh_config && cd ~ && git clone https://github.com/wyklif/basic.git
 
 
 
 
 # add github certificates
-RUN cp /.ssh/github_key.pub ~/.ssh/github_key.pub && cp /.ssh/github_key ~/.ssh/github_key
+RUN cp/home/ubuntu/.ssh/github_key.pub /home/ubuntu/.ssh/github_key.pub && cp/home/ubuntu/.ssh/github_key /home/ubuntu/.ssh/github_key
 
 
 
