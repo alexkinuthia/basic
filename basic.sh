@@ -162,7 +162,7 @@ docker build git@github.com:wyklif/basic.git
 
 
 
-cd ~ && rm -rf basic && git@github.com:wyklif/basic.git && cp ~/basic/Dockerfile ~/gitkey/Dockerfile && cd ~/gitkey/ && docker build -f ~/gitkey/Dockerfile -t basic:latest . && docker rm basic && docker run --privileged=true --name basic -p 8080:8080 -p 8083:8083 -v ~/gitkey/:/keys -v ~/certs:/certs -it basic /bin/bash
+cd ~ && rm -rf basic && git clone git@github.com:wyklif/basic.git && cp ~/basic/Dockerfile ~/gitkey/Dockerfile && cd ~/gitkey/ && docker build -f ~/gitkey/Dockerfile -t basic:latest . && docker rm basic && docker run --privileged=true --name basic -p 8080:8080 -p 8083:8083 -v ~/gitkey/:/keys -v ~/certs:/certs -it basic /bin/bash
 
 
 
