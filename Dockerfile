@@ -24,7 +24,7 @@ MAINTAINER you@codeengine.co.ke
 
 
 # Update the repository sources list
-RUN apt-get update
+RUN sudo apt-get update
 
 
 
@@ -34,7 +34,7 @@ RUN apt-get update
 
 
 
-RUN cd ~ && apt-get install -y iptables libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev build-essential g++ libcap2-bin unzip zip curl git libssl-dev
+RUN cd ~ && sudo apt-get install -y iptables libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev build-essential g++ libcap2-bin unzip zip curl git libssl-dev
 
 
 
