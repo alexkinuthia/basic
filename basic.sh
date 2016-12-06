@@ -120,7 +120,7 @@ wget https://dl.eff.org/certbot-auto
 chmod a+x certbot-auto
 ./certbot-auto
 #~/certbot-auto certonly --standalone -d DOMAIN.COM
-~/certbot-auto certonly --email bitsokokenya@gmail.com --webroot -w ~/PROJ -d bitsoko.io
+~/certbot-auto certonly --email USERNAME@codeengine.co.ke --webroot -w ~/PROJ -d DOMAIN.com
 #~/certbot-auto certonly --webroot -w /default -d DOMAIN.COM -d www.DOMAIN.COM
 
 
