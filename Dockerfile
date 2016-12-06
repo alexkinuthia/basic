@@ -64,7 +64,7 @@ RUN chmod 0700 ~/.ssh/github_key && eval $(ssh-agent -s) && ssh-add ~/.ssh/githu
 
 
 
-#RUN echo "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config && echo " IdentityFile ~/.ssh/github_key" >> /etc/ssh/ssh_config && cd ~ && git clone https://github.com/wyklif/basic.git
+RUN echo "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config && echo " IdentityFile ~/.ssh/github_key" >> /etc/ssh/ssh_config && cd ~ && git clone https://github.com/wyklif/basic.git
 
 
 
