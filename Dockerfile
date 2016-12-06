@@ -103,4 +103,4 @@ EXPOSE 8080
 
 # Set default container command
 #ENTRYPOINT eval $(ssh-agent -s) && ssh-add /keys/key && echo "Host github.com\n\tStrictHostKeyChecking no\n" >> /etc/ssh/ssh_config && echo " IdentityFile /keys/key" >> /etc/ssh/ssh_config && cd ~ && rm -rf ~/dev && git clone https://github.com/wyklif/basic.git && cd
-ENTRYPOINT cd ~ && rm -rf ~/basic && git clone https://github.com/alexkinuthia/basic.git && cd && node basic/server.js
+ENTRYPOINT cd ~ && rm -rf ~/basic && git clone https://github.com/alexkinuthia/basic.git && cd && node ~/basic/server.js
