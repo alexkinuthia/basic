@@ -24,7 +24,7 @@ MAINTAINER wycliffe@codeengine.co.ke
 
 
 # Update the repository sources list
-RUN apt-get update
+RUN apt-get update -qq
 
 
 
