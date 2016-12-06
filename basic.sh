@@ -226,7 +226,7 @@ read action
 
 if [ $action = clone ]
         then clone;
-        /etc/init.d/PROJ
+      
 echo "cloning complete.. exiting."
 exit
 elif [ $action = setup ]
